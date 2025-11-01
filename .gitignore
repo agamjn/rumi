@@ -31,3 +31,8 @@ Thumbs.db
 # Environment variables
 .env
 .env.local
+
+# Project-specific files
+PROGRESS.md
+Project.md
+.claude/
