@@ -1,10 +1,10 @@
-# Personal Content AI Assistant
+# Rumi - Personal Content AI Assistant
 
 An AI-powered content assistant that helps you create authentic, engaging content by leveraging your unique work, voice, and ideas.
 
 ## What It Does
 
-Your Personal Content AI Assistant acts as your content co-pilot, helping you:
+Rumi acts as your content co-pilot, helping you:
 
 ### 1. **Discover Content Ideas from Your Work**
 - Automatically scans your recent work (blog posts, social media, customer conversations)
@@ -13,7 +13,7 @@ Your Personal Content AI Assistant acts as your content co-pilot, helping you:
 - Connects patterns across your work to surface hidden stories
 
 ### 2. **Generate Content in Your Voice**
-Ask the assistant to write content, and it will:
+Ask Rumi to write content, and it will:
 - Match your LinkedIn voice (professional, story-driven)
 - Match your Twitter/X voice (technical, punchy)
 - Match your blog voice (in-depth, explanatory)
@@ -21,7 +21,7 @@ Ask the assistant to write content, and it will:
 - Reference your actual projects, customer insights, and technical achievements
 
 ### 3. **Query Your Personal Knowledge Base**
-Chat with your assistant to:
+Chat with Rumi to:
 - "Find everything I've written about Fastpull"
 - "What patterns do you see in my recent customer conversations?"
 - "Show me my highest-performing LinkedIn posts about GPU optimization"
@@ -35,7 +35,7 @@ Every morning, receive:
 - Patterns and insights from your recent work
 
 ### 5. **Smart Content Curation**
-The assistant helps you remember what matters:
+Rumi helps you remember what matters:
 - Reviews your browser history nightly
 - Suggests 10 articles/videos worth keeping based on pattern analysis
 - You review and approve - only what YOU choose gets remembered
@@ -89,7 +89,7 @@ Start your day with the digest:
 
 ## Content Sources
 
-The assistant learns from:
+Rumi learns from:
 
 ### What You Create (Automatic)
 - LinkedIn posts (with engagement data)
@@ -103,37 +103,29 @@ The assistant learns from:
 - Technical content you browse
 - You review and approve what gets remembered
 
-## Example Use Cases
+## Tech Stack
 
-**For Founders:**
-- Turn customer insights into content gold
-- Share technical achievements in accessible ways
-- Build thought leadership authentically
-- Never run out of content ideas
+### Backend
+- **Python 3.11+**: Core application
+- **Letta**: Agent orchestration and memory management
+- **AWS Bedrock Knowledge Base**: Managed RAG for content storage
+- **FastAPI**: REST API backend
+- **browser-use**: LLM-powered browser automation for LinkedIn/Twitter
 
-**For Technical Leaders:**
-- Document your technical work as content
-- Explain complex concepts in your voice
-- Share learnings from real projects
-- Build your personal brand
+### Frontend
+- **Next.js 14+**: Web interface
+- **React**: UI components
+- **TailwindCSS**: Styling
 
-**For Content Creators:**
-- Mine your work for stories
-- Maintain consistent voice across platforms
-- Connect dots across your experiences
-- Scale content creation without losing authenticity
+### Infrastructure
+- **AWS EC2**: Server for scheduled jobs
+- **AWS Bedrock**: Knowledge Base and embeddings
+- **SQLite or DynamoDB**: State management
 
-## Privacy & Control
-
-- All your content stays in your secure infrastructure
-- You control what gets remembered from consumption
-- Work and personal content kept separate
-- No training on your data, no external sharing
-
-## Get Started
-
-[Installation and setup instructions coming in project.md]
+### External Services
+- **Anthropic Claude API**: Classification, generation, browser automation
+- **Fathom API**: Meeting transcripts
 
 ---
 
-*Built for founders, by founders. Designed to help you share your unique work with the world, in your authentic voice.*
+*Named after Rumi, the 13th-century poet who mastered the art of expressing profound ideas through beautiful, accessible language.*
