@@ -1,0 +1,34 @@
+# Core Dependencies (Phase 0-1)
+# AWS SDK for DynamoDB, Bedrock, Secrets Manager, etc.
+boto3>=1.34.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Type-safe configuration
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# CloudWatch logging integration
+watchtower>=3.0.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+moto[dynamodb]>=4.2.0  # Mock AWS services for testing
+
+# Code Quality
+black>=23.0.0
+flake8>=6.1.0
+
+# Phase 2: Content Ingestion
+feedparser>=6.0.0          # Task 2.1 - RSS parsing
+openai>=1.12.0             # Task 2.3 - OpenAI API for classification
+
+# Future dependencies (will be added as needed):
+# anthropic>=0.8.0           # Alternative: Claude API
+# browser-use>=0.1.0         # Task 5.1 - Browser automation
+# letta>=0.1.0               # Task 4.1 - Agent framework
+# fastapi>=0.109.0           # Task 9.2 - API backend
+# uvicorn>=0.27.0            # Task 9.2 - ASGI server
