@@ -254,7 +254,11 @@ class RumiLettaClient:
         Returns:
             Agent object
         """
-        return self.client.agents.get(agent_id)
+        agents = self.client.agents.list()
+        agent = next((a for a in agents if a.id == agent_id), None)
+        if not agent:
+            raise ValueError(f"Agent not found: {agent_id}")
+        return agent
 
     def delete_agent(self, agent_id: str):
         """Delete an agent.

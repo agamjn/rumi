@@ -42,7 +42,10 @@ def print_memory(client: RumiLettaClient, agent_id: str):
         print("=" * 80)
 
         if hasattr(agent, 'memory') and agent.memory:
-            for block in agent.memory:
+            # Memory structure is agent.memory.blocks
+            blocks = agent.memory.blocks if hasattr(agent.memory, 'blocks') else []
+
+            for block in blocks:
                 if hasattr(block, 'label') and hasattr(block, 'value'):
                     print(f"\n[{block.label.upper()}]")
                     print(block.value)
