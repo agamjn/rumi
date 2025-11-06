@@ -32,3 +32,5 @@ openai>=1.12.0             # Task 2.3 - OpenAI API for classification
 # letta>=0.1.0               # Task 4.1 - Agent framework
 # fastapi>=0.109.0           # Task 9.2 - API backend
 # uvicorn>=0.27.0            # Task 9.2 - ASGI server
+qdrant-client>=1.15.0  # Vector database client
+tiktoken>=0.12.0  # Token counting for cost estimation

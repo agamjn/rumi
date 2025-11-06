@@ -21,23 +21,43 @@ class Settings(BaseSettings):
     aws_access_key_id: Optional[str] = None  # For traditional auth
     aws_secret_access_key: Optional[str] = None  # For traditional auth
 
-    # AI Provider APIs (Task 2.3 - optional until then)
-    anthropic_api_key: Optional[str] = None  # If using Claude
-    openai_api_key: Optional[str] = None      # If using OpenAI
+    # AI Provider APIs
+    anthropic_api_key: Optional[str] = None  # Anthropic Claude
+    openai_api_key: Optional[str] = None     # OpenAI GPT
 
-    # OpenAI Model Selection (for classification and other tasks)
-    # Options: "gpt-4o-mini" (cheapest), "gpt-4o" (best), "gpt-4-turbo" (overkill)
-    openai_model: str = "gpt-4o-mini"  # Default to cheapest, works great
+    # Ollama (local LLM hosting)
+    ollama_base_url: str = "http://host.docker.internal:11434"
 
-    # Bedrock Knowledge Base (Task 3.1 - optional until then)
+    # LLM Provider Selection
+    # Options: "openai", "anthropic", "ollama"
+    llm_provider: str = "openai"
+
+    # LLM Model Configuration (per provider)
+    openai_llm_model: str = "gpt-4o-mini"
+    anthropic_llm_model: str = "claude-3-5-sonnet-20241022"
+    ollama_llm_model: str = "llama3.2"
+
+    # Embedding Model Configuration (per provider)
+    openai_embedding_model: str = "text-embedding-3-small"
+    ollama_embedding_model: str = "mxbai-embed-large"
+
+    # Legacy (for backwards compatibility)
+    openai_model: str = "gpt-4o-mini"
+
+    # Bedrock Knowledge Base (deprecated - using Qdrant instead)
     bedrock_kb_id: Optional[str] = None
     bedrock_data_source_id: Optional[str] = None
+
+    # Qdrant Configuration
+    qdrant_host: str = "localhost"
+    qdrant_port: int = 6333
 
     # DynamoDB (Task 1.1 - will create table then)
     dynamodb_state_table: str = "rumi_state"
 
-    # Letta (Task 4.1 - optional until then)
-    letta_base_url: str = "http://localhost:8080"
+    # Letta Configuration
+    letta_base_url: str = "http://localhost:8283"
+    letta_server_password: Optional[str] = None
 
     # Fathom API (Task 6.1 - optional until then)
     fathom_api_key: Optional[str] = None
